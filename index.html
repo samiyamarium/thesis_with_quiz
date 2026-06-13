@@ -2,341 +2,214 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Agent Factory Certification Exam</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agent Factory Thesis - Interactive Quiz</title>
 
 <style>
-:root{
-    --primary:#0f9d58;
-    --secondary:#34a853;
-    --light:#f8fffb;
-    --border:#d8f0df;
-    --text:#1f2937;
-    --shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
 body{
-    background:linear-gradient(135deg,#f5fff8,#eefcf2);
-    color:var(--text);
-    line-height:1.6;
+    font-family:Segoe UI;
+    margin:0;
+    background:#f4fff7;
+    color:#1f2937;
 }
 
 header{
-    background:linear-gradient(135deg,#0f9d58,#34a853);
+    background:#0f9d58;
     color:white;
-    padding:60px 20px;
+    padding:30px;
     text-align:center;
-}
-
-header h1{
-    font-size:3rem;
-    margin-bottom:10px;
-}
-
-header p{
-    max-width:800px;
-    margin:auto;
-    opacity:0.95;
 }
 
 .container{
     width:90%;
-    max-width:1200px;
-    margin:40px auto;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:30px;
-    color:var(--primary);
-    font-size:2rem;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
 }
 
 .card{
     background:white;
-    border:1px solid var(--border);
-    border-radius:18px;
-    box-shadow:var(--shadow);
+    border-radius:12px;
+    margin:10px 0;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
     overflow:hidden;
-    transition:0.4s;
 }
 
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card-header{
-    padding:20px;
-    background:linear-gradient(135deg,#0f9d58,#34a853);
+.card h3{
+    margin:0;
+    padding:15px;
+    background:#34a853;
     color:white;
     cursor:pointer;
-    font-weight:600;
 }
 
-.card-content{
-    max-height:0;
-    overflow:hidden;
-    transition:max-height .5s ease;
-    padding:0 20px;
-}
-
-.card.active .card-content{
-    max-height:500px;
-    padding:20px;
-}
-
-.quiz-section{
-    margin-top:60px;
+.card div{
+    padding:15px;
+    display:none;
 }
 
 .question{
     background:white;
-    padding:20px;
-    margin-bottom:18px;
-    border-radius:15px;
-    border-left:5px solid var(--primary);
-    box-shadow:var(--shadow);
+    padding:15px;
+    margin:10px 0;
+    border-left:5px solid #0f9d58;
+    border-radius:10px;
 }
 
-.question h4{
-    margin-bottom:10px;
-    color:var(--primary);
+button{
+    background:#0f9d58;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    cursor:pointer;
+    margin-top:20px;
+    border-radius:8px;
 }
 
-.options{
-    margin-left:20px;
+.result{
+    font-size:20px;
+    margin-top:20px;
+    padding:15px;
+    background:#e8f5e9;
+    border-radius:10px;
 }
 
 .answer-key{
-    margin-top:50px;
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:var(--shadow);
-}
-
-.answer-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(80px,1fr));
-    gap:10px;
-    margin-top:20px;
-}
-
-.answer-item{
-    background:#eefcf2;
-    padding:10px;
+    background:#fff;
+    padding:15px;
+    margin-top:30px;
     border-radius:10px;
-    text-align:center;
-    font-weight:bold;
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    color:#666;
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Agent Factory Thesis</h1>
-<p>
-Interactive Learning Portal with Expandable Concept Cards,
-Technical Certification Quiz, and Answer Key.
-</p>
+<h1>Agent Factory Certification Exam</h1>
+<p>Interactive MCQ + Concept Learning Portal</p>
 </header>
 
 <div class="container">
 
-<h2 class="section-title">Core Agent Factory Concepts</h2>
-
-<div class="cards">
-
+<!-- CONCEPT CARDS -->
 <div class="card">
-<div class="card-header">Two Modes of General Agent Use</div>
-<div class="card-content">
-<p><strong>General Agent Mode:</strong> Solve tasks directly.</p>
-<p><strong>Factory Mode:</strong> Create reusable assets, workflows, prompts, evaluations and organizational knowledge.</p>
+<h3 onclick="toggle(this)">Two Modes of Agent Use</h3>
+<div>
+General Mode = direct task execution.<br>
+Factory Mode = reusable assets, workflows, and systems.
 </div>
 </div>
 
 <div class="card">
-<div class="card-header">Seven Invariants</div>
-<div class="card-content">
-<p>Core principles that remain stable regardless of implementation, models, tools or platforms.</p>
-<p>These ensure reliability and repeatability.</p>
+<h3 onclick="toggle(this)">Memory System</h3>
+<div>
+Memory enables continuity across sessions and turns interactions into long-term intelligence.
 </div>
 </div>
 
 <div class="card">
-<div class="card-header">Reference Stack</div>
-<div class="card-content">
-<p>A structured architecture describing how agents operate.</p>
-<p>Includes governance, memory, context engineering, evaluation and runtime execution.</p>
+<h3 onclick="toggle(this)">Context Engineering</h3>
+<div>
+Controls what information enters the model to improve output quality.
 </div>
 </div>
 
-<div class="card">
-<div class="card-header">Context Engineering</div>
-<div class="card-content">
-<p>The science of managing information flow into an agent.</p>
-<p>High quality context leads to high quality outputs.</p>
-</div>
-</div>
+<!-- QUIZ -->
+<h2>30 Question MCQ Exam</h2>
 
-<div class="card">
-<div class="card-header">Memory Systems</div>
-<div class="card-content">
-<p>Memory provides continuity across sessions and tasks.</p>
-<p>It transforms isolated interactions into cumulative intelligence.</p>
-</div>
-</div>
+<div id="quiz"></div>
 
-<div class="card">
-<div class="card-header">Evaluation Loops</div>
-<div class="card-content">
-<p>Measure agent quality and performance.</p>
-<p>Evaluation drives continuous improvement and stable production systems.</p>
-</div>
-</div>
+<button onclick="submitQuiz()">Submit Exam</button>
 
-<div class="card">
-<div class="card-header">Stable Systems</div>
-<div class="card-content">
-<p>Stable systems remain predictable under changing conditions.</p>
-<p>Observability and measurement are critical characteristics.</p>
-</div>
-</div>
+<div id="result"></div>
 
-<div class="card">
-<div class="card-header">Asset Accumulation</div>
-<div class="card-content">
-<p>Every successful task should become a reusable organizational asset.</p>
-<p>This creates compounding productivity gains.</p>
-</div>
-</div>
-
-</div>
-
-<div class="quiz-section">
-
-<h2 class="section-title">Agent Factory Technical Quiz (30 MCQs)</h2>
-
-<div id="questions"></div>
-
+<!-- ANSWER KEY -->
 <div class="answer-key">
-<h2>Answer Key</h2>
-
-<div class="answer-grid">
-<div class="answer-item">1-B</div>
-<div class="answer-item">2-C</div>
-<div class="answer-item">3-C</div>
-<div class="answer-item">4-C</div>
-<div class="answer-item">5-B</div>
-<div class="answer-item">6-B</div>
-<div class="answer-item">7-B</div>
-<div class="answer-item">8-B</div>
-<div class="answer-item">9-C</div>
-<div class="answer-item">10-A</div>
-<div class="answer-item">11-B</div>
-<div class="answer-item">12-B</div>
-<div class="answer-item">13-B</div>
-<div class="answer-item">14-B</div>
-<div class="answer-item">15-B</div>
-<div class="answer-item">16-B</div>
-<div class="answer-item">17-B</div>
-<div class="answer-item">18-D</div>
-<div class="answer-item">19-A</div>
-<div class="answer-item">20-A</div>
-<div class="answer-item">21-B</div>
-<div class="answer-item">22-B</div>
-<div class="answer-item">23-C</div>
-<div class="answer-item">24-A</div>
-<div class="answer-item">25-A</div>
-<div class="answer-item">26-B</div>
-<div class="answer-item">27-A</div>
-<div class="answer-item">28-A</div>
-<div class="answer-item">29-A</div>
-<div class="answer-item">30-B</div>
-</div>
+<h3>Answer Key</h3>
+<p>
+1-B 2-C 3-C 4-C 5-B 6-B 7-B 8-B 9-C 10-A<br>
+11-B 12-B 13-B 14-B 15-B 16-B 17-B 18-D 19-A 20-A<br>
+21-B 22-B 23-C 24-A 25-A 26-B 27-A 28-A 29-A 30-B
+</p>
 </div>
 
 </div>
-</div>
-
-<footer>
-Agent Factory Thesis Interactive Learning Experience
-</footer>
 
 <script>
 
-document.querySelectorAll('.card-header').forEach(header=>{
-    header.addEventListener('click',()=>{
-        header.parentElement.classList.toggle('active');
-    });
-});
+function toggle(el){
+    let content = el.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+}
 
 const questions = [
-"1. What is the primary purpose of the Agent Factory framework?",
-"2. Which mode focuses on immediate task execution without creating reusable assets?",
-"3. Which mode aims to generate reusable artifacts and organizational knowledge?",
-"4. In Agent Factory, an agent should primarily be treated as?",
-"5. Which principle emphasizes that successful work should become reusable assets?",
-"6. The Reference Stack primarily helps agents?",
-"7. Which component sits closest to execution?",
-"8. A stable system is one that?",
-"9. The term 'Invariant' refers to?",
-"10. Which invariant focuses on repeatability and consistency?",
-"11. Context Engineering is primarily concerned with?",
-"12. Memory in Agent Factory is viewed as?",
-"13. Why is evaluation important?",
-"14. An agent factory seeks to maximize?",
-"15. The concept of Stable mainly addresses?",
-"16. A reusable workflow should ideally become?",
-"17. What is the role of governance?",
-"18. Which is NOT typically part of a robust agent system?",
-"19. The Factory approach differs from ordinary prompting because it emphasizes?",
-"20. Which layer is responsible for actual execution of tasks?",
-"21. An agent's memory should be?",
-"22. The Agent Factory philosophy treats prompts as?",
-"23. What is a major benefit of reusable assets?",
-"24. Evaluation loops help achieve?",
-"25. Which concept supports long-term organizational intelligence?",
-"26. The goal of a reference architecture is to?",
-"27. Factory Mode most closely resembles?",
-"28. A stable agent system should be?",
-"29. What transforms isolated successes into organizational capability?",
-"30. The ultimate objective of Agent Factory is?"
+["What is Agent Factory primarily for?","Building static apps","Reusable AI systems","Gaming","Databases","B"],
+["Which mode is direct execution?","Factory Mode","Training Mode","General Mode","Debug Mode","C"],
+["Factory Mode focuses on?","One-time output","Reusable assets","Random chat","UI design","B"],
+["Agents are treated as?","Chatbots","Systems","Files","Tokens","B"],
+["Memory provides?","Random output","Continuity","Speed","Errors","B"],
+["Context Engineering manages?","GPU","Data flow","Internet","UI","B"],
+["Runtime layer does?","Planning","Execution","Storage","Design","B"],
+["Stable system means?","Random","Predictable","Broken","Slow","B"],
+["Invariant means?","Changing rule","Constant property","Bug","Feature","B"],
+["Determinism ensures?","Randomness","Repeatability","Noise","Loss","B"],
+["Memory type is?","Optional","Structured","Deleted","Hidden","B"],
+["Evaluation helps?","Break system","Measure quality","Delete data","Encrypt","B"],
+["Factory goal is?","One-time work","Reusable assets","Chatbots","UI","B"],
+["Stable refers to?","Unstable system","Reliable system","Broken system","Testing","B"],
+["Reusable workflow becomes?","Waste","Asset","Bug","Noise","B"],
+["Governance means?","Control","Gaming","UI","Speed","A"],
+["Not part of system?","Memory","Evaluation","Random guess","Context","C"],
+["Factory approach emphasizes?","Reuse","Waste","Speed only","UI only","A"],
+["Execution layer is?","Runtime","Design","Memory","UI","A"],
+["Memory should be?","Random","Structured","Deleted","Hidden","B"],
+["Prompts are?","Final product","Temporary tool","Database","Hardware","B"],
+["Benefit of reuse?","Less learning","More chaos","More productivity","Less output","C"],
+["Evaluation loop gives?","Improvement","Failure","Noise","Randomness","A"],
+["Asset accumulation gives?","Loss","Growth","Bug","Delay","A"],
+["Reference stack is?","Structure","Random system","UI","Model","B"],
+["Factory resembles?","Manufacturing","Gaming","Chat","Search","A"],
+["Stable system is?","Predictable","Random","Broken","Temporary","A"],
+["Asset reuse leads to?","Capability","Loss","Error","Delay","A"],
+["Goal of factory?","Single prompt","Scalable agents","Chatbots","UI","B"],
+["Best outcome is?","System building","Random output","Noise","Failure","B"]
 ];
 
-const container=document.getElementById("questions");
+let container = document.getElementById("quiz");
 
-questions.forEach(q=>{
-const div=document.createElement("div");
-div.className="question";
-div.innerHTML=`<h4>${q}</h4>
-<div class="options">
-A. Option A<br>
-B. Option B<br>
-C. Option C<br>
-D. Option D
-</div>`;
-container.appendChild(div);
+questions.forEach((q,i)=>{
+    container.innerHTML += `
+    <div class="question">
+        <b>${i+1}. ${q[0]}</b><br><br>
+        <label><input type="radio" name="q${i}" value="A"> ${q[1]}</label><br>
+        <label><input type="radio" name="q${i}" value="B"> ${q[2]}</label><br>
+        <label><input type="radio" name="q${i}" value="C"> ${q[3]}</label><br>
+        <label><input type="radio" name="q${i}" value="D"> ${q[4]}</label>
+    </div>
+    `;
 });
+
+function submitQuiz(){
+    let score = 0;
+
+    questions.forEach((q,i)=>{
+        let selected = document.querySelector(`input[name=q${i}]:checked`);
+        if(selected && selected.value === q[5]){
+            score++;
+        }
+    });
+
+    let result = document.getElementById("result");
+    let percent = (score/30)*100;
+
+    result.innerHTML = `
+        <div class="result">
+        Score: ${score}/30 (${percent.toFixed(1)}%)<br>
+        ${percent >= 70 ? "🎉 PASS" : "❌ FAIL"}
+        </div>
+    `;
+}
 
 </script>
 
